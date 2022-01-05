@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Contact us! </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Font Awesome Icon Library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" type="image/x-icon" href="D:\jelo file\UMAK school\INTCOMP\E-Commerce\contact.ico">
+</head>
+<style>
+
+p {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+}
+
+
+* {box-sizing: border-box;}
+
+body { 
+  margin: 10;
+  font-family: Arial;
+}
+
+.container {
+/* Center myDIV vertically and horizontally*/
+  float: none;
+  position: relative;
+  top: %;
+  left: 50%;
+  transform: translate(-50%, -10%);
+}
+
+#myDIV {
+  width: 800px;
+  height: 450px;
+  background-color: black;
+  border-style: double;
+  border-radius: 20px;
+  opacity: .9;
+  border-color: #4DFFF6;
+  border-width: thick;
+  box-sizing: border-box;
+}
+
+.fa {
+  font-size: 25px;
+  text-decoration: none;
+	}
+
+
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook {
+  padding: 40px;
+  font-size: 50px;
+  width: 150px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 8px;
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  padding: 40px;
+  font-size: 50px;
+  width: 150px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 8px;
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-instagram {
+  padding: 40px;
+  font-size: 50px;
+  width: 150px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 8px;
+  background: linear-gradient(to bottom, #ff33cc 0%, #ff9900 100%);
+  color: white;
+	}
+
+@keyframes mymove {
+  50% {background-color: blue;}
+  
+  
+}
+.heading {
+  font-size: 25px;
+  color: black;
+  margin-right: 25px;
+}
+
+.header {
+  overflow: hidden;
+  background-color: gold;
+  padding: 12px 10px;
+  font-family: Tahoma;
+  border-radius: 100px;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border-radius: 1px;
+}
+
+.sticky + .content {
+  padding-top: 1px;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: justify;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 20px; 
+  line-height: 25px;
+  border-radius: 100px;
+}
+
+.header .icon {
+  display: block;
+}
+
+
+.dropdown {
+  position: fixed;
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  position: static;
+  font-size: 20px;    
+  background-color: gold;
+  color: black;
+  padding: 14px 100px;
+  font-family: Tahoma;
+  margin: 0;
+   border-radius: 100px;
+}
+
+.dropdown-content {
+  display: none;
+  position: sticky;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 20px 30px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+   border-radius: 1px;
+}
+
+.dropdown-content a {	
+  position: sticky;
+  background-color: white;
+  float: none;
+  color: green;
+  Font-weight: bold;
+  padding: 12px 16px;
+  display: block;
+  text-align: left;
+}
+
+
+.header a:hover, .dropdown:hover .dropbtn {
+  position: static;  
+  background-color: white;
+  color: brown;
+  Font-weight: bold;
+}
+
+.dropdown-content a:hover {
+  position: sticky;  
+  background-color: green;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  position: sticky;
+  display: block;
+  border-radius: 25px;
+}
+
+.header a.logo {
+  float: none;
+  position: absolute;
+  top: %;
+  left: 50%;
+  transform: translate(-50%, -16%);
+}
+
+.header a.logo {
+  float: none;
+  box-sizing: border-box;
+  width: 310px;
+  height: 78px;
+}
+
+.header a:hover {
+  background-color: yellow;
+  color: red;
+  border-radius: 25px;
+  Font-weight: bold;
+}
+
+.sticky a:hover {
+  background-color: yellow;
+  color: red;
+  border-radius: 1px;
+  Font-weight: bold;
+}
+
+.header a.active {
+  background-color: red;
+  color: white;
+}
+
+.sticky a.active {
+  background-color: red;
+  color: white;
+  border-radius: 1px;
+}
+
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+@media screen and (max-width: 600px) {
+  .header a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .header a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header.responsive {position: relative;}
+  .header.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  .header.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+
+  }
+  .header.responsive .dropdown {float: none;}
+  .header.responsive .dropdown-content {position: relative;}
+  .header.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+
+  .header-right {
+    float: right;
+  }  
+  
+.header a.logo {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+ }
+
+ 
+</style>
+<body>
+<body style="background-image: url('contact.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%; text-align:center; font-family:courier; color:white;">
+
+<!-- Centered link -->
+<div class="header" id="home">
+  <a href="About our resto.html" class="logo">
+<img border="0" src="Logo.png" width="280" height="50"></a>
+
+<!-- Left-aligned links (default) -->
+	<div class="dropdown">
+    <button class="dropbtn">Menu 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="What's new.html">What's new?</a>
+      <a href="Burgers.html">Burgers</a>
+      <a href="Drinks and Sides.html">Drinks and Sides</a>
+	  <a href="Special Menu.html">Special Menu</a>
+	
+	</div>
+</div>
+
+<!-- Right-aligned links -->
+<div class="header-right">
+    <a href="E-Commerce.html">Home</a>
+    <a href="Contact us!.html" class="active">Contact us</a>
+<div class="sticky">
+			
+			</div>
+		</div>
+	</div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container" id="myDIV">
+<h1 style="text-align:center"> Contact Number: <u>09491554912</u> or <u>09298217210 </u></h1>
+	<p style="color:white; text-align:center; font-size:125%;"> <b>Chloriette's Burgir Joint branches: </b>Makati PRC, SM Ayala Makati,<br>
+	Ayala Circuit Makati, SM Manila, SM Mall of Asia, SM Megamall,<br>
+	SM Aura, Greenhills, BGC Taguig, Star Mall Alabang.</p>
+	<p style="color:white; text-align:center; font-size:160%;"><b>Social medias are linked below. </b></p>
+	<br>
+	<!-- Add font awesome icons -->
+	<a href="#" class="fa fa-facebook"></a>
+	<a href="#" class="fa fa-twitter"></a>
+	<a href="#" class="fa fa-instagram"></a>
+</div>
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("home");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
+</script>
+	
+</body>
+</html>

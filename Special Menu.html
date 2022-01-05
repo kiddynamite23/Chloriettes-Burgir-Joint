@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Special Menu </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Font Awesome Icon Library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" type="image/x-icon" href="D:\jelo file\UMAK school\INTCOMP\E-Commerce\special.ico">
+</head>
+<style>
+
+p {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+}
+
+
+* {box-sizing: border-box;}
+
+body { 
+  margin: 10;
+  font-family: Arial;
+}
+
+
+@keyframes mymove {
+  50% {background-color: blue;
+  }
+}
+.heading {
+  font-size: 25px;
+  color: black;
+  margin-right: 25px;
+}
+
+.fa {
+  font-size: 25px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook {
+  padding: 25px;
+  font-size: 30px;
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 8px;
+  background: #3B5998;
+  color: white;
+  border-radius: 25px;
+}
+
+.fa-twitter {
+  padding: 25px;
+  font-size: 30px;
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 8px;
+  background: #55ACEE;
+  color: white;
+  border-radius: 25px;
+}
+
+.fa-instagram {
+  padding: 25px;
+  font-size: 30px;
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 8px;
+  background: linear-gradient(to bottom, #ff33cc 0%, #ff9900 100%);
+  color: white;
+  border-radius: 25px;
+	}
+
+.header {
+  overflow: hidden;
+  background-color: gold;
+  padding: 12px 10px;
+  font-family: Tahoma;
+  border-radius: 100px;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border-radius: 1px;
+}
+
+.sticky + .content {
+  padding-top: 1px;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: justify;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 20px; 
+  line-height: 25px;
+  border-radius: 100px;
+}
+
+.header .icon {
+  display: block;
+}
+
+.dropdown {
+  position: fixed;
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  position: sticky;
+  font-size: 20px;    
+  background-color: gold;
+  color: black;
+  padding: 14px 100px;
+  font-family: Tahoma;
+  margin: 0;
+   border-radius: 100px;
+}
+
+.dropdown-content {
+  display: none;
+  position: sticky;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 20px 30px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+   border-radius: 1px;
+}
+
+.dropdown-content a {	
+  position: sticky;
+  background-color: white;
+  float: none;
+  color: green;
+  Font-weight: bold;
+  padding: 12px 16px;
+  display: block;
+  text-align: left;
+}
+
+.header a:hover, .dropdown:hover .dropbtn {
+  position: static;  
+  background-color: white;
+  color: brown;
+  Font-weight: bold;
+}
+
+.dropdown-content a:hover {
+  position: sticky;  
+  background-color: green;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  position: sticky;
+  display: block;
+  border-radius: 25px;
+}
+
+.header a.logo {
+  float: none;
+  position: absolute;
+  top: %;
+  left: 50%;
+  transform: translate(-50%, -16%);
+}
+
+.header a.logo {
+  float: none;
+  box-sizing: border-box;
+  width: 310px;
+  height: 78px;
+}
+
+.header a:hover {
+  background-color: yellow;
+  color: red;
+  border-radius: 25px;
+  Font-weight: bold;
+}
+
+.sticky a:hover {
+  background-color: yellow;
+  color: red;
+  border-radius: 1px;
+  Font-weight: bold;
+}
+
+.header a.active {
+  background-color: red;
+  color: white;
+}
+
+.sticky a.active {
+  background-color: red;
+  color: white;
+  border-radius: 1px;
+}
+
+.header-right {
+  float: right;
+}
+
+
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+ @-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #07F9FE, 0 0 20px #07F9FE, 0 0 30px #07F9FE, 0 0 40px #07F9FE, 0 0 50px #07F9FE, 0 0 60px #07F9FE, 0 0 70px #07F9FE;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #FF0C0C, 0 0 30px #FF0C0C, 0 0 40px #FF0C0C, 0 0 50px #FF0C0C, 0 0 60px #FF0C0C, 0 0 70px #FF0C0C, 0 0 80px #FF0C0C;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+@media screen and (max-width: 600px) {
+  .header a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .header a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header.responsive {position: relative;}
+  .header.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .header.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+
+  }
+  .header.responsive .dropdown {float: none;}
+  .header.responsive .dropdown-content {position: relative;}
+  .header.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+
+  .header-right {
+    float: right;
+  }  
+  
+.header a.logo {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+ }
+ 
+</style>
+<body>
+<body style="background-image: url('special.png'); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%; text-align:center; font-family:courier; color:white;">
+
+<!-- Centered link -->
+<div class="header" id="home">
+  <a href="About our resto.html" class="logo">
+<img border="0" src="Logo.png" width="280" height="50"></a>
+
+<!-- Left-aligned links (default) -->
+	<div class="dropdown">
+    <button class="dropbtn">Menu 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+     <a href="What's new.html">What's new?</a>
+      <a href="Burgers.html">Burgers</a>
+      <a href="Drinks and Sides.html">Drinks and Sides</a>
+	  <a href="Special Menu.html" class="active">Special Menu</a>`
+	
+	</div>
+</div>
+
+<!-- Right-aligned links -->
+<div class="header-right">
+    <a href="E-Commerce.html">Home</a>
+    <a href="Contact us!.html">Contact us!</a>
+<div class="sticky">
+			
+			</div>
+		</div>
+	</div>
+</div>
+
+<br>
+<br>
+	<br>
+<p style="text-align:center; font-family:Brush Script MT ;font-size:540%"><u>Special Menu</u></p>
+	<p style="color:#FFF254; text-align:center; font-family:Brush Script MT ;font-size:340%">Chloriette's Burgir Joint</p>
+	<hr size="4" align="center" width="50%" color="white">
+	<br>
+	<br>
+	<br>
+	<p style="color:white; text-align:center; font-family:Century; font-size:300%">Chicken Alfredo Pasta<br>
+	<br>
+	<img src="alfredo.jpg" width="546" height="456" align="center" style="border-style: double; border-width:thick; border-radius:5px;">
+	<p style="color:white; text-align:center; font-family:Century; font-size:300%"><u>₱200.00</u></p>
+	<br>
+	<br>
+	<hr size="4" align="center" width="30%" color="white">
+	<br>
+	<br>
+	<p style="color:white; text-align:center; font-family:Century; font-size:300%">Wagyu A5 Grilled Steak<br>
+	<br>
+	<img src="wagyu.jpg" width="456" height="456" align="center" style="border-style: double; border-width:thick; border-radius:5px;">
+	<p style="color:white; text-align:center; font-family:Century; font-size:300%"><u>₱5,000.00</u></p>
+	<br>
+	<br>
+	<hr size="4" align="center" width="30%" color="white">
+	<br>
+	<br>
+	<p style="color:white; text-align:center; font-family:Century; font-size:300%">Cheezy Overload Burger<br>
+	<br>
+	<img src="cheese.jpg" width="536" height="536" align="center" style="border-style: double; border-width:thick; border-radius:5px;">
+	<p style="color:white; text-align:center; font-family:Century; font-size:300%"><u>₱325.00</u></p>
+	<br>
+	<br>
+	<hr size="4" align="center" width="30%" color="white">
+	<br>
+	<br>
+	<p style="color:white; text-align:center; font-family:MV Boli; font-size:270%"><b>You can make your own Burger now!<br> 
+	Introducing our new<br> 
+	Mix & Match!</b></p>
+	<img src="mix.gif" width="350" height="450" align="center" style="border-style: double; border-width:thick; border-radius:5px;">
+	<br>
+	<br>
+	<br>
+	<p style="color:white; text-align:center; font-family:Sitka Banner; font-size:200%">Make your own combination of burger! just go on<br>
+	our Mixxy Matchy machine in order to make your own burger.<br>
+	Price starts at:</p>
+	<p style="color:white; text-align:center; font-family:Bookman Old Style; font-size:275%"><u>₱50.00</u></p>
+	<br>
+	<br>
+	<p style="color:white; text-align:center; font-family:Arial; font-size:80%"><b><u>Ask for assistance if you don't know how to process.<br>
+	Thank you.</u></b></p>
+	<br>
+	<br>
+	<hr size="4" align="center" width="30%" color="white">
+	<br>
+	<br>
+	<p style="color:white; text-align:center; font-family:Century; font-size:300%">Lasagna<br>
+	<br>
+	<img src="lasagna.jpg" width="556" height="400" align="center" style="border-style: double; border-width:thick; border-radius:5px;">
+	<p style="color:white; text-align:center; font-family:Century; font-size:300%"><u>₱275.00</u></p>
+	<br>
+	<br>
+	<hr size="4" align="center" width="30%" color="white">
+	<br>
+	<br>
+	<p style="color:white; text-align:center; font-family:Century; font-size:300%">Tomahawk Steak<br>
+	<br>
+	<img src="tomahawk.jpg" width="456" height="456" align="center" style="border-style: double; border-width:thick; border-radius:5px;">
+	<p style="color:white; text-align:center; font-family:Century; font-size:300%"><u>₱3,500.00</u></p>
+	<br>
+	<br>
+	<hr size="4" align="center" width="30%" color="white">
+	<br>
+	<br>
+	<p style="color:white; text-align:center; font-family:Century; font-size:300%">Pan-seared Salmon<br>
+	<br>
+	<img src="salmon.jpg" width="400" height="556" align="center" style="border-style: double; border-width:thick; border-radius:5px;">
+	<p style="color:white; text-align:center; font-family:Century; font-size:300%"><u>₱675.00</u></p>
+	<br>
+	<br>		
+	<hr size="4" align="center" width="30%" color="white">
+	<br>
+	<br>
+	<p style="color:white; text-align:center; font-family:Century; font-size:300%"> Steak Burger </p>
+	<br>
+	<img src="sliced.jpg" width="556" height="556" align="center" style="border-style: double; border-width:thick; border-radius:5px;">
+	<p style="color:white; text-align:center; font-family:Bookman Old Style; font-size:275%"><u>₱650.00</u></p>
+	<br>
+	<br>
+	<hr size="4" align="center" width="30%" color="white">
+	<br>
+	<br>
+	<p style="color:white; text-align:center; font-family:Century; font-size:300%">Soft Tacos (3 lrg pcs.)<br>
+	<br>
+	<img src="soft.jpg" width="556" height="400" align="center" style="border-style: double; border-width:thick; border-radius:5px;">
+	<p style="color:white; text-align:center; font-family:Century; font-size:300%"><u>₱300.00</u></p>
+	<br>
+	<br>
+	<hr size="4" align="center" width="30%" color="white">
+	<br>
+	<br>
+	<p style="color:white; text-align:center; font-family:Century; font-size:300%">Chicken Wings (12 pcs.)<br>
+	<br>
+	<img src="wings.jpg" width="556" height="556" align="center" style="border-style: double; border-width:thick; border-radius:5px;">
+	<p style="color:white; text-align:center; font-family:Century; font-size:300%"><u>₱400.00</u></p>
+	<br>
+	<br>
+	<p style="color:white; text-align:center; font-family:Arial; font-size:80%"><b><u>Flavors available are:<br>
+	Buffalo wings, Salted egg, sour cream, honey soy garlic, sweet & spicy, barbeque, and sriracha.</u></b></p>
+	<br>
+	<br>
+	<br>
+	<hr size="4" align="center" width="50%" color="white">
+	<br>
+	<br>
+	<br>
+	<p style="color:white; text-align:center; font-size:125%;"><b><u>For more updates, click our<br> 
+	social medias below and follow us!</u></b></p>
+	<br>
+	<!-- Add font awesome icons -->
+	<a href="#" class="fa fa-facebook"></a>
+	<a href="#" class="fa fa-twitter"></a>
+	<a href="#" class="fa fa-instagram"></a>
+	</div>
+
+</div>
+<br>
+<br>
+<br>
+<br>
+	
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("home");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
+</script>
+	
+</body>
+</html>

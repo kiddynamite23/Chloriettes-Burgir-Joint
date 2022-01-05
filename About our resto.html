@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> About our resto </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Font Awesome Icon Library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" type="image/x-icon" href="D:\jelo file\UMAK school\INTCOMP\E-Commerce\about.ico">
+</head>
+<style>
+
+p {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+}
+
+
+* {box-sizing: border-box;}
+
+body { 
+  margin: 10;
+  font-family: Arial;
+}
+
+.square {
+  margin-right: 250px;
+  margin-left: 250px;
+  height: 5090px;
+  width: 1000px;
+  background: linear-gradient(to bottom, #3D3E98 0%, #C64545 100%);
+  border-style: double;
+  border-width: thick;
+  border-color: #5EFF2D;
+  border-radius: 10px;
+}
+
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: gold;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: #C64545;
+  background-color: transparent;
+  text-decoration: underline;
+}  
+ 
+
+@keyframes mymove {
+  50% {background-color: blue;}
+   
+}
+.heading {
+  font-size: 25px;
+  color: black;
+  margin-right: 25px;
+}
+
+.fa {
+  font-size: 25px;
+}
+
+.header {
+  overflow: hidden;
+  background-color: gold;
+  padding: 12px 10px;
+  font-family: Tahoma;
+  border-radius: 100px;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border-radius: 1px;
+}
+
+.sticky + .content {
+  padding-top: 1px;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: justify;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 20px; 
+  line-height: 25px;
+  border-radius: 100px;
+}
+
+.header .icon {
+  display: block;
+}
+
+.dropdown {
+  position: fixed;
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  position: sticky;
+  font-size: 20px;    
+  background-color: gold;
+  color: black;
+  padding: 14px 100px;
+  font-family: Tahoma;
+  margin: 0;
+   border-radius: 100px;
+}
+
+.dropdown-content {
+  display: none;
+  position: sticky;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 20px 30px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+   border-radius: 1px;
+}
+
+.dropdown-content a {	
+  position: sticky;
+  background-color: white;
+  float: none;
+  color: green;
+  Font-weight: bold;
+  padding: 12px 16px;
+  display: block;
+  text-align: left;
+}
+
+.header a:hover, .dropdown:hover .dropbtn {
+  position: static;  
+  background-color: white;
+  color: brown;
+  Font-weight: bold;
+}
+
+.dropdown-content a:hover {
+  position: sticky;  
+  background-color: green;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  position: sticky;
+  display: block;
+  border-radius: 25px;
+}
+
+.header a.logo {
+  float: none;
+  position: absolute;
+  top: %;
+  left: 50%;
+  transform: translate(-50%, -16%);
+}
+
+.header a.logo {
+  float: none;
+  box-sizing: border-box;
+  width: 310px;
+  height: 78px;
+}
+
+.header a:hover {
+  background-color: yellow;
+  color: red;
+  border-radius: 25px;
+  Font-weight: bold;
+}
+
+.sticky a:hover {
+  background-color: yellow;
+  color: red;
+  border-radius: 1px;
+  Font-weight: bold;
+}
+
+.header a.active {
+  background-color: red;
+  color: white;
+}
+
+.sticky a.active {
+  background-color: red;
+  color: white;
+  border-radius: 1px;
+}
+
+.header-right {
+  float: right;
+}
+
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+@media screen and (max-width: 600px) {
+  .header a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .header a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header.responsive {position: relative;}
+  .header.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .header.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+
+  }
+  .header.responsive .dropdown {float: none;}
+  .header.responsive .dropdown-content {position: relative;}
+  .header.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+
+  .header-right {
+    float: right;
+  }  
+  
+.header a.logo {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+ }
+ 
+</style>
+<body>
+<body style="background-image: url('About.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%; text-align:center; font-family:courier; color:white;">
+
+<!-- Centered link -->
+<div class="header" id="home">
+  <a href="About our resto.html" class="logo">
+<img border="0" src="Logo.png" width="280" height="50"></a>
+
+<!-- Left-aligned links (default) -->
+	<div class="dropdown">
+    <button class="dropbtn">Menu 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+	  <a href="What's new.html">What's new?</a>
+      <a href="Burgers.html">Burgers</a>
+      <a href="Drinks and Sides.html">Drinks and Sides</a>
+	  <a href="Special Menu.html">Special Menu</a>
+	
+	</div>
+</div>
+
+<!-- Right-aligned links -->
+<div class="header-right">
+    <a href="E-Commerce.html">Home</a>
+    <a href="Contact us!.html">Contact us</a>
+<div class="sticky">
+			
+		</div>
+	</div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="square">
+<p style="text-align:center; font-size:350%; font-family:Algerian; margin:30px 65px"> How it all started.. </p>
+<br>
+<br>
+<br>
+	<p style="color:#FD4BFF; text-align:center; font-family:Ink Free; font-size:250%;"><b> The mindful creator</b></p>
+	<img src="small joint.jpg" width="250" height="300" align="center">
+	<br>
+	<br>
+	<p style="color:white; text-align:justify;font-family:Monotype Corsiva; margin:0px 10px 0px 50px; font-size:150%;">Chloriette's Burgir Joint started when a young youtuber,
+	<a href="https://www.youtube.com/channel/UCG7Kg6R7iU4CeQoOtQ24rRg" target="_blank">Jerico Lorenzo Misolas</a>, thought of having a business</p>
+	<p style="color:white; text-align:justify;font-family:Monotype Corsiva; margin:0px 10px 0px 10px; font-size:150%;">in order to invest his savings to the world of business. As you see from the image above, the Chloriette's Burgir
+	Joint also started as a small place at the corner of the Malolos Street, in Makati. People seemed to like it that it 
+	sometimes causes a traffic due to how lots of people fall in line in patient, just to order our precious burgers. As a 
+	business man, he needed to have a bigger place in order to make place for not only people waiting in line, but for people
+	who wants to eat on the resto also, And so he closed the food stall and sold the place in order to have a budget for a little
+	bit more spacious area in another place. </p>
+	<br>
+	<br>
+	<br>
+	<p style="color:#FD4BFF; text-align:center; font-family:Ink Free; font-size:250%;"><b> The Small Expansion</b></p>
+	<img src="growing.jpg" width="250" height="300" align="center">
+	<br>
+	<br>
+	<p style="color:white; text-align: justify;font-family:Monotype Corsiva; margin:0px 5px 0px 50px; font-size:150%;">As Mr. Misolas found a space for his little expansion, he started to share the small restaurant's new place so</p>
+	<p style="color:white; text-align: justify;font-family:Monotype Corsiva; margin:0px 10px 0px 10px; font-size:150%;">that the customers would know where to go if they wanted to taste it again. The new resto was located at
+	Masukol St. in Makati, which is a walking distance away from the first resto. As expected, people still loved the
+	food. As time passes by, tv shows appeared to have recognize the growth of the restaurant, which back in the day 
+	was named "Classic Burger Joint". Since the Burger Joint got so popular, Mr. Misolas needed to expand his restaurant 
+	yet again, but he even if his business is successful, he needed a lot of budget, he sold his place at the masukol and
+	he had some business investment from Mr. Carlos Matocino and Mr. Aris Longalong.</p>
+	bit more spacious area in another place. </p>
+	<br>
+	<br>
+	<br>
+	<p style="color:#FD4BFF; text-align:center; font-family:Ink Free; font-size:250%;"><b> The Growth and The Re-Branding</b></p>
+	<img src="Logo.png" width="800" height="250" align="center">
+	<br>
+	<br>
+	<p style="color:white; text-align: justify;font-family:Monotype Corsiva; margin:0px 5px 0px 50px; font-size:150%;">After having an additional budget due to an investment from Mr. Matocino and Mr. Longalong, a bigger exp-</p>
+	<p style="color:white; text-align: justify;font-family:Monotype Corsiva; margin:0px 10px 0px 10px; font-size:150%;">ansion has been processed. Not just that, but another two people invested, which are named Mr. Neil Christian 
+	Lonod and Ms. Alroneah Lagunay, which has led to Mr. Misolas' mind to have some burger joints to other places.
+	They also re-branded the name into "Chloriette's Burgir Joint".</p>
+	<br>
+	<br>
+	<br>
+	<img src="latest.jpg" width="800" height="468" align="center">
+	<br>
+	<br>
+	<p style="color:white; text-align: justify;font-family:Monotype Corsiva; margin:0px 10px 0px 10px; font-size:150%;">The first place was in Ayala Circuit Makati, which is also a walking distance away from the Masukol street. It
+	Became a bigger restaurant due to a very spacious place, and since it is now placed in a mall, more people are
+	starting to know the taste of our best of the best burgers. After a successful re-launch to Ayala Circuit Makati,
+	Mr. Misolas, which is the owner of the Chloriette's Burgir Joint, he announced the new three branches of the resto,
+	which are located at SM Mall of Asia, BGC Taguig, and Makati PRC.</p>
+	<br>
+	<br>
+	<br>
+	<p style="color:white; text-align: center;font-family:Monotype Corsiva; margin:0px 10px 0px 10px; font-size:200%;"> SM Mall of Asia</p>
+	<br>
+	<img src="stage.jpg" width="800" height="468" align="center">
+	<br>
+	<br>
+	<br>
+	<p style="color:white; text-align: center;font-family:Monotype Corsiva; margin:0px 10px 0px 10px; font-size:200%;"> BGC Taguig</p>
+	<br>
+	<img src="second.jpg" width="800" height="468" align="center">
+	<br>
+	<br>
+	<br>
+	<p style="color:white; text-align: center;font-family:Monotype Corsiva; margin:0px 10px 0px 10px; font-size:200%;"> Makati PRC</p>
+	<br>
+	<img src="third.jpg" width="800" height="468" align="center">
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<p style="color:#FD4BFF; text-align:center; font-family:Ink Free; font-size:250%;"><b> The Next Chapter</b></p>
+	<img src="partnership.jpg" width="800" height="250" align="center">
+	<br>
+	<br>
+	<br>
+	<p style="color:white; text-align: justify;font-family:Monotype Corsiva; margin:0px 5px 0px 50px; font-size:150%;">'til today, The Chloriette's Burgir Joint is still the people's burger, and the Resto is still planning to expand, in</p>
+	<p style="color:white; text-align: justify;font-family:Monotype Corsiva; margin:0px 10px 0px 10px; font-size:150%;">order to give what the people want. The Resto's main goal is to give satisfaction to the customers. As of now, The 
+	Chloriette's Burgir Joint have 10 branches in total. Never worry, because the company plans to come near in your place!</p>
+</div>
+<br>
+	
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("home");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
+</script>
+	
+</body>
+</html>

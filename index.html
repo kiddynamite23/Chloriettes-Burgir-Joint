@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Dec 31, 2021 23:59:59").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
+<title> Home </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Font Awesome Icon Library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" type="image/x-icon" href="D:\jelo file\UMAK school\INTCOMP\E-Commerce\home.ico">
+</head>
+<style>
+
+p {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+}
+
+
+* {box-sizing: border-box;}
+
+body { 
+  margin: 10;
+  font-family: Arial;
+}
+
+.container {
+/* Center myDIV vertically and horizontally*/
+  float: none;
+  position: relative;
+  top: %;
+  left: 50%;
+  transform: translate(-50%, -10%);
+}
+
+#myDIV {
+  width: 800px;
+  height: 270px;
+  background-color: gold;
+  border-style: double;
+  border-radius: 35px;
+  opacity: .9;
+  box-sizing: border-box;
+}
+
+
+@keyframes mymove {
+  50% {background-color: blue;}
+}
+
+a:link {
+  color: gold;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.heading {
+  font-size: 25px;
+  color: black;
+  margin-right: 25px;
+}
+
+.fa {
+  font-size: 25px;
+}
+
+.checked {
+  color: red;
+}
+
+/* Three column layout */
+.side {
+  font-family: Georgia Pro Black;
+  Font-weight: bold;
+  color: black;
+  float: left;
+  width: 15%;
+  margin-top:10px;
+}
+
+.middle {
+  font-family: Georgia Pro Black;
+  Font-weight: bold;
+  margin-top:10px;
+  float: left;
+  width: 60%;
+}
+
+/* Place text to the right */
+.right {
+  font-family: Georgia Pro Black;
+  text-align: right;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The bar container */
+.bar-container {
+  width: 100%;
+  background-color: White;
+  text-align: center;
+  color: black;
+}
+
+/* Individual bars */
+.bar-5 {width: 89.99%; height: 18px; background-color: #04AA6D;}
+.bar-4 {width: 5.35%; height: 18px; background-color: #2196F3;}
+.bar-3 {width: 1.41%; height: 18px; background-color: #00bcd4;}
+.bar-2 {width: 0.07%; height: 18px; background-color: #ff9800;}
+.bar-1 {width: 3.18%; height: 18px; background-color: #f44336;}
+
+/* Responsive layout - make the columns stack on top of each other instead of next to each other */
+@media (max-width: 400px) {
+  .side, .middle {
+    width: 100%;
+  }
+  .right {
+    display: none;
+	color: black;
+  }
+}
+.header {
+  overflow: hidden;
+  background-color: gold;
+  padding: 12px 10px;
+  font-family: Tahoma;
+  border-radius: 100px;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border-radius: 1px;
+}
+
+.sticky + .content {
+  padding-top: 1px;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: justify;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 20px; 
+  line-height: 25px;
+  border-radius: 100px;
+}
+
+.header .icon {
+  display: block;
+}
+
+.dropdown {
+  position: fixed;
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  position: sticky;
+  font-size: 20px;    
+  background-color: gold;
+  color: black;
+  padding: 14px 100px;
+  font-family: Tahoma;
+  margin: 0;
+   border-radius: 100px;
+}
+
+.dropdown-content {
+  display: none;
+  position: sticky;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 20px 30px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+   border-radius: 1px;
+}
+
+.dropdown-content a {	
+  position: sticky;
+  background-color: white;
+  float: none;
+  color: green;
+  Font-weight: bold;
+  padding: 12px 16px;
+  display: block;
+  text-align: left;
+}
+
+.header a:hover, .dropdown:hover .dropbtn {
+  position: static;  
+  background-color: white;
+  color: brown;
+  Font-weight: bold;
+}
+
+.dropdown-content a:hover {
+  position: sticky;  
+  background-color: green;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  position: sticky;
+  display: block;
+  border-radius: 25px;
+}
+
+.header a.logo {
+  float: none;
+  position: absolute;
+  top: %;
+  left: 50%;
+  transform: translate(-50%, -16%);
+}
+
+.header a.logo {
+  float: none;
+  box-sizing: border-box;
+  width: 310px;
+  height: 78px;
+}
+
+.header a:hover {
+  background-color: yellow;
+  color: red;
+  border-radius: 25px;
+  Font-weight: bold;
+}
+
+.sticky a:hover {
+  background-color: yellow;
+  color: red;
+  border-radius: 1px;
+  Font-weight: bold;
+}
+
+.header a.active {
+  background-color: red;
+  color: white;
+}
+
+.sticky a.active {
+  background-color: red;
+  color: white;
+  border-radius: 1px;
+}
+
+.header-right {
+  float: right;
+}
+
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+.only {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+ @-webkit-keyframes only {
+  from {
+    text-shadow: 0 0 10px #FF0C0C, 0 0 20px #FF0C0C, 0 0 30px #FF0C0C, 0 0 40px #FF0C0C, 0 0 50px #FF0C0C, 0 0 60px #FF0C0C, 0 0 70px #FF0C0C;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #FF69C4, 0 0 30px #FF69C4, 0 0 40px #FF69C4, 0 0 50px #FF69C4, 0 0 60px #FF69C4, 0 0 70px #FF69C4, 0 0 80px #FF69C4;
+  }
+}
+
+ @-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #07F9FE, 0 0 20px #07F9FE, 0 0 30px #07F9FE, 0 0 40px #07F9FE, 0 0 50px #07F9FE, 0 0 60px #07F9FE, 0 0 70px #07F9FE;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #FF0C0C, 0 0 30px #FF0C0C, 0 0 40px #FF0C0C, 0 0 50px #FF0C0C, 0 0 60px #FF0C0C, 0 0 70px #FF0C0C, 0 0 80px #FF0C0C;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+@media screen and (max-width: 600px) {
+  .header a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .header a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header.responsive {position: relative;}
+  .header.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .header.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+
+  }
+  .header.responsive .dropdown {float: none;}
+  .header.responsive .dropdown-content {position: relative;}
+  .header.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+
+  .header-right {
+    float: right;
+  }  
+  
+.header a.logo {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+ }
+ 
+
+</style>
+<body>
+<body style="background-image: url('Chloriette.png'); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%; text-align:center; font-family:courier; color:white;">
+
+<!-- Centered link -->
+<div class="header" id="home">
+  <a href="About our resto.html" class="logo">
+<img border="0" src="Logo.png" width="280" height="50"></a>
+
+<!-- Left-aligned links (default) -->
+	<div class="dropdown">
+    <button class="dropbtn">Menu 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+       <a href="What's new.html">What's new?</a>
+      <a href="Burgers.html">Burgers</a>
+      <a href="Drinks and Sides.html">Drinks and Sides</a>
+	  <a href="Special Menu.html">Special Menu</a>
+	
+	</div>
+</div>
+
+<!-- Right-aligned links -->
+<div class="header-right">
+    <a href="E-Commerce.html" class="active">Home</a>
+    <a href="Contact us!.html">Contact us!</a>
+<div class="sticky">
+			
+			</div>
+		</div>
+	</div>
+</div>
+
+<br>
+<br>
+	<br>
+	<p class="glow" style="text-align:justify; font-family:Brush Script MT ;font-size:540%"><b>Enjoy the Best Burger in Town!</b></p>
+	<img src="arrow.gif" width="925" height="300" align="left">
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<h1 style="color:white; text-align:justify; font-size:125%"><b> Only Here at Chloriette's Burgir Joint.</b></h1>
+	<br>
+	<br>
+	<br>
+	<br>
+	<hr size="4" align="left" width="61.5%" color="white"> 
+	<br>
+	<br>
+	<br>
+	<br>
+	<p class="only" style="color:white; text-align:justify; font-family:Bookman Old Style; font-size:250%"><b>2022 IS COMING!!!</b></p>
+	<p style="color:white; text-align:justify; font-family:Kristen ITC; font-size:150%"> Welcome 2022 with our new Family Deal Promo!<br>
+	click the link below for more info.</p>
+	<a href="What's new.html" target="_blank" style="Font-family:DokChampa; float:left; font-size:125%;">2022 new Family Deal Promo</a>
+	<br>
+	<br>
+	<img src="2022.jpg" style="float:left;" width="850" height="300">
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<p style="color:white; text-align:justify; font-family:Lucida Calligraphy; font-size:150%"> countdown til' the promo starts:</p>
+	<p style="font-family:calibri; text-align:justify ; font-size:250%" id="countdown"> </p>
+	<br>
+	<br>
+	<hr size="4" align="left" width="61.5%" color="white"> 
+	<br>
+	<br>
+	<br>
+	<br>
+	<p style="color:white; text-align:justify; font-family:Rockwell; font-size:150%">did you know that there is a special menu? &#128064;<br>
+	Click the link to learn more.</p><br>
+	<a href="Special Menu.html" target="_blank" style="Font-family:Rockwell; float:left; font-size:125%;">Forbidden Menu &#128064</a>
+	<br>
+	<br>
+	<br>
+	<br>
+	<hr size="4" align="left" width="61.5%" color="white">
+	<br>
+	<br>
+	<br>
+	<br>
+	<p style="color:white; text-align:justify; font-family:Rockwell; font-size:135%"> Any questions about our services? just click the link below this to know how to contact us. &#128522;</p>
+	<br>
+	<a href="Contact us!.html" target="_blank" style="Font-family:Rockwell; float:left; font-size:100%;">How to Contact us</a>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<hr size="2"  width="100%" color="white">
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div class="container" id="myDIV">
+<span class="heading" span style="font-family:Cavolini; color: black; font-size: 150%"><b>Customer's Rating</b></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star-half-full" style="color:red"></span>
+<p style="font-family:Cavolini; color: black; font-size: 100%"><b>4.5 stars over thousands of reviews!</b></p>
+<hr style="border:1px solid green">
+
+<div class="row">
+  <div class="side">
+    <div>5 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-5"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>40,900</div>
+  </div>
+  <div class="side">
+    <div>4 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-4"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>1,604</div>
+  </div>
+  <div class="side">
+    <div>3 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-3"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>642</div>
+  </div>
+  <div class="side">
+    <div>2 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-2"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>31</div>
+  </div>
+  <div class="side">
+    <div>1 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-1"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>1,446</div>
+  </div>
+</div>
+</div>
+<br>
+	
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("home");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
+</script>
+	
+</body>
+</html>
